@@ -1,4 +1,4 @@
-# flutter_app
+# automob
 
 A new Flutter application.
 
