@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Screen2.dart';
+import 'BuyerRegister.dart';
 
 class Screen1 extends StatelessWidget {
   @override
@@ -33,7 +33,7 @@ class Screen1 extends StatelessWidget {
                     child: InkWell(
                       onTap: () {},
                       child: Center(
-                        child: Text("SIGN IN AS A SELLER",
+                        child: Text("SIGN UP AS A SELLER",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: "Poppins-Bold",
@@ -65,7 +65,7 @@ class Screen1 extends StatelessWidget {
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>Screen2_1()));
                       },
                       child: Center(
-                        child: Text("SIGN IN AS A BUYER",
+                        child: Text("SIGN UP AS A BUYER",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: "Poppins-Bold",

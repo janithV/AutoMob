@@ -1,35 +1,31 @@
 import 'package:flutter/material.dart';
-import 'screen1.dart';
+import 'SelectType.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFF090C22),
+        backgroundColor: Color(0xFFFFFFFF),
         body: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Center(child: Image(image: AssetImage('images/wheelerpngfinal.png'))),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                   margin: const EdgeInsets.only(left: 10.0,top: 100.0,right:80.0,bottom: 10.0),
+                  child: Image(image: AssetImage('images/wheelerpngfinal.png'))),
+              Container(
+                margin: const EdgeInsets.only(left:20.0,top:10.0,right: 20.0,bottom: 10.0),
                 child: TextField(
                   decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'Email',
-                      hintStyle: TextStyle(
-                        color: Colors.blueGrey,
-                      ),
-                      icon: Icon(
-                        Icons.email,
-                        size: 30,
-                        color: Colors.white,
-                      ),
+                      hintStyle: TextStyle(color: Colors.blueGrey,),
+                      prefixIcon: Icon(Icons.email),
                       border: OutlineInputBorder(
                           borderRadius:
-                          BorderRadius.all(Radius.circular(15.0)))),
+                          BorderRadius.all(Radius.circular(5.0)))),
                 ),
               ),
               Container(
@@ -40,17 +36,11 @@ class HomePage extends StatelessWidget {
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'Password',
-                      hintStyle: TextStyle(
-                        color: Colors.blueGrey,
-                      ),
-                      icon: Icon(
-                        Icons.lock,
-                        size: 30,
-                        color: Colors.white,
-                      ),
+                      hintStyle: TextStyle(color: Colors.blueGrey,),
+                      prefixIcon: Icon(Icons.lock),
                       border: OutlineInputBorder(
                           borderRadius:
-                          BorderRadius.all(Radius.circular(15.0)))),
+                          BorderRadius.all(Radius.circular(5.0)))),
                 ),
               ),
               SizedBox(
@@ -98,7 +88,7 @@ class HomePage extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     'New User?',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    style: TextStyle(color: Colors.black, fontSize: 18),
                   ),
                   SizedBox(
                     width: 5,
