@@ -40,6 +40,6 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   void navigateToSignUp(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage(), fullscreenDialog: true));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpAsABuyer(), fullscreenDialog: true));
   }
 }

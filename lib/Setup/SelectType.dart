@@ -5,7 +5,9 @@ class SelectType extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+
         backgroundColor: Color(0xFFFFFFFF),
+
         appBar: AppBar(
           backgroundColor: Color(0xFF090C22),
           title: Text('AutoMob'),
@@ -32,7 +34,9 @@ class SelectType extends StatelessWidget {
                   child: Material(
                     color: Colors.transparent,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpAsASeller()));
+                      },
                       child: Center(
                         child: Text("SIGN UP AS A SELLER",
                             style: TextStyle(
@@ -63,7 +67,7 @@ class SelectType extends StatelessWidget {
                     color: Colors.transparent,
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpAsABuyer()));
                       },
                       child: Center(
                         child: Text("SIGN UP AS A BUYER",
