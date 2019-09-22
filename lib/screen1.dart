@@ -7,7 +7,7 @@ class Screen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFF090C22),
+        //backgroundColor: Color(0xFF090C22),
         appBar: AppBar(
           backgroundColor: Color(0xFF090C22),
           title: Text('AutoMob'),
@@ -31,7 +31,9 @@ class Screen1 extends StatelessWidget {
                   child: Material(
                     color: Colors.transparent,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Screen2_2()));
+                      },
                       child: Center(
                         child: Text("SIGN IN AS A SELLER",
                             style: TextStyle(
