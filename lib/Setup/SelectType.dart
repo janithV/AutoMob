@@ -35,7 +35,7 @@ class SelectType extends StatelessWidget {
                     color: Colors.transparent,
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpAsASeller()));
                       },
                       child: Center(
                         child: Text("SIGN UP AS A SELLER",
@@ -67,7 +67,7 @@ class SelectType extends StatelessWidget {
                     color: Colors.transparent,
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpAsABuyer()));
                       },
                       child: Center(
                         child: Text("SIGN UP AS A BUYER",
