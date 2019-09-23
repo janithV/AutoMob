@@ -1,3 +1,5 @@
+import 'package:automob/my_items.dart';
+import 'package:automob/new_item.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -9,9 +11,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home ${user.email}'),
-      ),
+
       body: StreamBuilder<DocumentSnapshot>(
         stream: Firestore.instance
             .collection('users')
@@ -36,16 +36,41 @@ class Home extends StatelessWidget {
         child: Text('no data set in the userId document in firestore'),
       );
     }
-    if (snapshot.data['role'] == 'admin') {
-      return adminPage(snapshot);
+    if (snapshot.data['role'] == 'seller') {
+      return shopPage(snapshot);
     } else {
       return userPage(snapshot);
     }
   }
 
-  Center adminPage(DocumentSnapshot snapshot) {
+  Center shopPage(DocumentSnapshot snapshot) {
+
+
     return Center(
-        child: Text('${snapshot.data['role']} ${snapshot.data['fullName']}'));
+        child: MaterialApp(
+          home: DefaultTabController(
+            length: 2,
+            child: Scaffold(
+              appBar: AppBar(
+                bottom: TabBar(
+                  tabs: [
+                    Tab(icon: Icon(Icons.directions_car)),
+                    Tab(icon: Icon(Icons.add))
+                  ],
+                ),
+                title: Text('Home ${user.email}'),
+              ),
+              body: TabBarView(
+                children: [
+                  MyItem(),
+                  AddItem(),
+                ],
+              ),
+            ),
+          ),
+        )
+    );
+        //child: Text('${snapshot.data['role']} ${snapshot.data['shopname']}'));
   }
 
   Center userPage(DocumentSnapshot snapshot) {

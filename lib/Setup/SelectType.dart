@@ -1,4 +1,4 @@
-import 'package:automob/Setup/buyerRegister.dart';
+import 'package:automob/Setup/sign_up.dart';
 import 'package:flutter/material.dart';
 class SelectType extends StatelessWidget {
   @override

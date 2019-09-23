@@ -16,7 +16,7 @@ class _SignUpAsABuyerState extends State<SignUpAsABuyer> {
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String _email, _password,_name,_tp;
-  final databaseReference = FirebaseDatabase.instance.reference();
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -191,7 +191,7 @@ class _SignUpAsASellerState extends State<SignUpAsASeller> {
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String _shopname, _password,_ownername,_shoptp,_location,_email;
-  final databaseReference = FirebaseDatabase.instance.reference();
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -345,7 +345,7 @@ class _SignUpAsASellerState extends State<SignUpAsASeller> {
                             borderRadius:
                             BorderRadius.all(Radius.circular(15.0)))
                     ),
-                    onSaved: (input) => _ownername = input,
+                    onSaved: (input) => _password = input,
                     obscureText: true,
                   ),
                 ),

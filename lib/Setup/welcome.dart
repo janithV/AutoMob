@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'sign_in.dart';
-import 'buyerRegister.dart';
+import 'sign_up.dart';
 
 
 
